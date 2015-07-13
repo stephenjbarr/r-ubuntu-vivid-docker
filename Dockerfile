@@ -25,3 +25,5 @@ RUN apt-get -y build-dep libxml2-dev
 RUN apt-get -y install libxml2-dev
 RUN Rscript -e "install.packages('devtools')"
 RUN Rscript -e "install.packages('lubridate')"
+RUN Rscript -e "require(devtools); devtools::install_github('hadley/lazyeval'); devtools::install_github('hadley/dplyr')"
+RUN Rscript -e "require(devtools); devtools::install_github('hadley/tidyr');"
